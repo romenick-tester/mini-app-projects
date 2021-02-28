@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+}
