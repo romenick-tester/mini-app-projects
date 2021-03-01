@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-    BirthdayReminder,
-    Tours,
-} from "./apps";
+import BirthdayReminder from "./apps/1BirthdayReminder";
 
 function App() {
     return <BirthdayReminder />

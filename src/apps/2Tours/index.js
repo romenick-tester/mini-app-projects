@@ -1,6 +1,7 @@
 import React from 'react';
-import { } from "./components";
-import "./source";
+import Loading from "./components/Loading";
+import Tour from "./components/Tour";
+import "./source/index.css";
 
 function Tours() {
     return (
