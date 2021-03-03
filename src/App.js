@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from "./apps/3reviews";
+import Project from "./apps/4_accordion";
 
 function App() {
     return <Project />
