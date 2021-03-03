@@ -1,8 +1,8 @@
 import React from 'react';
-import Tours from "./apps/2Tours";
+import Project from "./apps/3reviews";
 
 function App() {
-    return <Tours />
+    return <Project />
 }
 
 export default App;
