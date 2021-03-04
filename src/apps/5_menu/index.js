@@ -4,36 +4,24 @@ import Menu from './components/Menu';
 import items from './source/data';
 import "./source/index.css";
 
+const currentCategories = new Set(items.map((x) => x.category));
+
+const allCategories = ["all", ...currentCategories];
+
 function MenuApp() {
   const [menu, setMenu] = useState(items);
+  const [categories, setCategories] = useState(allCategories);
 
   const filterItems = (category) => {
+    let newItems;
 
-    switch (category) {
-      case "breakfast":
-        const breakfastItems = items.filter((item) => item.category === "breakfast");
-        setMenu(breakfastItems);
-        return;
-
-      case "lunch":
-        const lunchItems = items.filter((item) => item.category === "lunch");
-        setMenu(lunchItems);
-        return;
-
-      case "dinner":
-        const dinnerItems = items.filter((item) => item.category === "dinner");
-        setMenu(dinnerItems);
-        return;
-
-      case "shakes":
-        const shakesItems = items.filter((item) => item.category === "shakes");
-        setMenu(shakesItems);
-        return;
-
-      default:
-        setMenu(items);
-        return;
+    if (category === "all") {
+      newItems = items;
+    } else {
+      newItems = items.filter((x) => x.category === category);
     }
+
+    setMenu(newItems);
   }
 
   return (
@@ -43,10 +31,10 @@ function MenuApp() {
           <h2>our menu</h2>
           <div className="underline"></div>
         </div>
-        <Categories filterItems={filterItems} />
+        <Categories categories={categories} filterItems={filterItems} />
         <Menu items={menu} />
       </section>
-      hello</main>
+    </main>
   )
 }
 

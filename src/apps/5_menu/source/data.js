@@ -82,5 +82,13 @@ const menu = [
     img: img9,
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: 'ribeye-steaks',
+    category: 'dinner',
+    price: 49.99,
+    img: img10,
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
 export default menu;
