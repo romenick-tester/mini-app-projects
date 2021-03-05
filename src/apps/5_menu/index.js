@@ -10,6 +10,7 @@ const allCategories = ["all", ...currentCategories];
 
 function MenuApp() {
   const [menu, setMenu] = useState(items);
+  // eslint-disable-next-line
   const [categories, setCategories] = useState(allCategories);
 
   const filterItems = (category) => {
