@@ -9,7 +9,16 @@ function App() {
 
   function submitHandler(e) {
     e.preventDefault();
-    console.log(count);
+
+    let amount = Number(count);
+
+    if (count <= 0) {
+      amount = 1;
+    } else if (count > data.length - 1) {
+      amount = data.length - 1;
+    }
+
+    setText(data.slice(0, amount))
   }
 
   return (
@@ -26,8 +35,9 @@ function App() {
         <button type="submit" className="btn">generate</button>
       </form>
       <article className="lorem-text">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fuga!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fuga!</p>
+        {text.map((item, index) => {
+          return <p key={index}>{item}</p>
+        })}
       </article>
     </section>
   )
