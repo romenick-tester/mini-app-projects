@@ -12,7 +12,17 @@ function ColorGenerator() {
 
   function submitHandler(e) {
     e.preventDefault();
-    console.log("hello");
+
+    try {
+      let colors = new Values(color).all(10);
+
+      setPalettes(colors);
+
+    } catch (error) {
+      setError(true);
+
+      console.error(error.message);
+    }
   }
 
   return (
@@ -27,7 +37,8 @@ function ColorGenerator() {
             type="text"
             value={color}
             onChange={(e) => setColor(e.target.value)}
-            placeholder="#f15025" />
+            placeholder="#f15025"
+            className={error ? "error" : null} />
 
           <button className="btn" type="submit">submit</button>
 
@@ -36,9 +47,7 @@ function ColorGenerator() {
       </section>
 
       <section className="colors">
-
-        <h4>List goes here...</h4>
-
+        {palettes.map((color, index) => <SingleColor key={index} color={color} index={index} />)}
       </section>
     </>
   )
