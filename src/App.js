@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from "./apps/8_lorem_ipsum";
+import Project from "./apps/9_color_generator";
 
 function App() {
     return <Project />
