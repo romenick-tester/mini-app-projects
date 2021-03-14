@@ -40,6 +40,9 @@
 >
 * see this app in action: https://tester-dummytext-generator.netlify.app/
 
+## 9. Color Tint/Shades Generator
+![Color-Generator](https://i.ibb.co/mHBWFPn/color-tints-shades.png)
+
 https://i.ibb.co/9nmxT0X/stripe.png
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
@@ -51,7 +54,6 @@ https://i.ibb.co/CHgyt9k/markdown-preview.png
 https://i.ibb.co/Y0hm3HH/hacker-news.png
 https://i.ibb.co/3MFMYsH/grocery-buddy.png
 https://i.ibb.co/5j27CT1/dark-mode.png
-https://i.ibb.co/mHBWFPn/color-tints-shades.png
 https://i.ibb.co/HtGPYX1/cocktails.png
 https://i.ibb.co/xDwPdvt/cart.png
 https://i.ibb.co/PTC7FmM/122551328-827671727987000-3253431235894150343-n.jpg
