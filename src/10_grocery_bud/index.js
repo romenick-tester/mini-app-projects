@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import List from "./List";
 import Alert from "./Alert";
 
@@ -15,9 +15,20 @@ function GroceryBud() {
     e.preventDefault();
 
     if (!name) {
-      showAlert("Please enter a value!", "danger", true)
+      showAlert("Please enter a value!", "danger", true);
+
     } else if (name && isEditing) {
-      //deal with edit
+      setList(list.map((item) => {
+        if (item.id === editId) {
+          return { ...item, title: name }
+        }
+        return item;
+      }));
+      setName("");
+      setEditId(null);
+      setIsEditing(false);
+      showAlert("edit item!", "success", true);
+
     } else {
       showAlert("new item added!", "success", true);
       const newItem = {
@@ -45,6 +56,14 @@ function GroceryBud() {
     setList(filteredItems);
   }
 
+  function editItem(id) {
+    const itemById = list.find((item) => item.id === id);
+
+    setIsEditing(true);
+    setEditId(id);
+    setName(itemById.title);
+  }
+
   return (
     <section className="section-center">
       <form className="grocery-form" onSubmit={handleSubmit}>
@@ -65,7 +84,7 @@ function GroceryBud() {
       </form>
       {list.length > 0 && (
         <div className="grocery-container">
-          <List items={list} removeItem={removeItem} />
+          <List items={list} removeItem={removeItem} editItem={editItem} />
           <button className="clear-btn" onClick={clearList}>
             clear items
           </button>
