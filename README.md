@@ -12,6 +12,7 @@
 * see this app in action: https://tester-tour.netlify.app
 
 ## 3. Previews
+![Previews](https://i.ibb.co/4RP2WQn/reviews.png)
 >...click back and forward buttons to show the next candidate's profile. *minor bug with the container
 * see this app in action: https://tester-reviews.netlify.app
 
