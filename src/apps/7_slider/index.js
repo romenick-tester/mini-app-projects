@@ -6,7 +6,7 @@ import data from './data';
 import "./index.css";
 
 function Slider() {
-  const [people, setPeople] = useState(data);
+  const people = data;
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

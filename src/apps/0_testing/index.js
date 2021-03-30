@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import data from "./data";
 import { FaQuoteRight } from "react-icons/fa";
 import "./index.css";
 
 function Test() {
-    const [people, setPeople] = useState(data);
+    const people = data;
 
     return (
         <section className="section">

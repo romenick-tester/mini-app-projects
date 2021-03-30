@@ -6,7 +6,7 @@ import data from './data';
 import "./index.css";
 
 function SliderV2() {
-  const [people, setPeople] = useState(data);
+  const people = data;
   const [index, setIndex] = useState(0);
 
   function onClick(direction) {
@@ -45,7 +45,7 @@ function SliderV2() {
     return () => {
       clearInterval(x);
     }
-  }, [index]);
+  }, [index, people]);
 
   return (
     <section className="section">
