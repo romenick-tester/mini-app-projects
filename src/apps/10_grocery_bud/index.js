@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import List from "./List";
 import Alert from "./Alert";
 
 import "./index.css";
 
+const listFromLocalStorage = localStorage.getItem("list") ? JSON.parse(localStorage.getItem("list")) : [];
+
 function GroceryBud() {
   const [name, setName] = useState("");
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(listFromLocalStorage);
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
   const [alert, setAlert] = useState({ msg: "", type: "", show: false });
@@ -63,6 +65,10 @@ function GroceryBud() {
     setEditId(id);
     setName(itemById.title);
   }
+
+  useEffect(() => {
+    localStorage.setItem("list", JSON.stringify(list));
+  }, [list]);
 
   return (
     <section className="section-center">
