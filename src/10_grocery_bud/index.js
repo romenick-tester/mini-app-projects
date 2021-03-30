@@ -34,10 +34,21 @@ function GroceryBud() {
     setAlert({ msg, type, show });
   };
 
+  function clearList() {
+    showAlert("empty list", "danger", true);
+    setList([]);
+  }
+
+  function removeItem(id) {
+    showAlert("item removed!", "danger", true);
+    const filteredItems = list.filter((item) => item.id !== id);
+    setList(filteredItems);
+  }
+
   return (
     <section className="section-center">
       <form className="grocery-form" onSubmit={handleSubmit}>
-        {alert.show && <Alert {...alert} removeAlert={showAlert} />}
+        {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
         <h3>grocery bud</h3>
         <div className="form-control">
           <input
@@ -54,8 +65,8 @@ function GroceryBud() {
       </form>
       {list.length > 0 && (
         <div className="grocery-container">
-          <List items={list} />
-          <button className="clear-btn">
+          <List items={list} removeItem={removeItem} />
+          <button className="clear-btn" onClick={clearList}>
             clear items
           </button>
         </div>
