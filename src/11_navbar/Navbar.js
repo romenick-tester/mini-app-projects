@@ -80,7 +80,7 @@ const Wrapper = styled.nav`
   }
 
   .show-container {
-    height: 10rem;
+    height: calc(${links.length} * 2.5rem);
   }
 
   @media screen and (min-width: 800px) {
