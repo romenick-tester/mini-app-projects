@@ -1,9 +1,9 @@
 # mini-app-projects:
->A collection of mini app projects that I've completed through a course.
+> A collection of mini app projects that I've completed through a course.
 
 ## 1. Birthday-Reminder
 ![Birth-Reminder](https://i.ibb.co/J5nS8JY/birthday-reminder.png)
->a simple app that remind user the upcoming birthdays!
+> a simple app that remind user the upcoming birthdays!
 * see this app in action: https://tester-reminderbirthday.netlify.app/
 
 ## 2. Tours
@@ -40,31 +40,31 @@
 ![Lorem-Ipsum](https://i.ibb.co/yFH1451/lorem-ipsum.png)
 * see this app in action: https://tester-dummytext-generator.netlify.app/
 
-> Pointers: 
-    * slice
-    * min/max if statement
+> Pointers: <br/>
+    1. slice <br/>
+    2. min/max if statement
 
 
 ## 9. Color Tint/Shades Generator
 ![Color-Generator](https://i.ibb.co/mHBWFPn/color-tints-shades.png)
 
-> Pointers: 
-    * npm package -> "values.js"
-    * navigator.clipboard.writeText(value);
+> Pointers: <br/>
+    1. npm package -> "values.js" <br/>
+    2. navigator.clipboard.writeText(value);
 
 ## 10. Grocery Buddy
 ![grocery-bud](https://i.ibb.co/3MFMYsH/grocery-buddy.png)
-
-> Pointers:
-    * setTimeout() / clearTimeout
-    * localStorage
+---
+> Pointers: <br/>
+    1. setTimeout() / clearTimeout <br/>
+    2. localStorage
 
 ## 11. Navbar
 ![navbar](https://i.ibb.co/WD6S202/navbar.png)
 
-> Pointers:
-    * useRef 
-    * getBoundingClientRef()
+> Pointers: <br/>
+    1. useRef() <br/>
+    2. getBoundingClientRect()
 
 https://i.ibb.co/9nmxT0X/stripe.png
 https://i.ibb.co/Ns8kNyB/stock-photos.png
