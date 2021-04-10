@@ -6,12 +6,17 @@ import SocialLinks from "./components/SocialLinks";
 import { links, socials } from "./assets/data";
 
 const Navbar = () => {
+  const [showLinks, setShowLinks] = useState(false);
+
+  function linksToggler() {
+    setShowLinks(!showLinks);
+  }
 
   return (
     <Wrapper>
       <div className="nav-center">
-        <NavHeader />
-        <Sidebar links={links} />
+        <NavHeader toggler={linksToggler} />
+        <Sidebar links={links} showLinks={showLinks} />
         <SocialLinks socials={socials} />
       </div>
     </Wrapper>
