@@ -44,7 +44,7 @@ export const links = [
   },
 ];
 
-export const social = [
+export const socialLinks = [
   {
     id: 1,
     url: 'https://www.twitter.com',
