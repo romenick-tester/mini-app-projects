@@ -26,6 +26,11 @@ export const links = [
     id: 5,
     url: "/profile",
     text: "profile",
+  },
+  {
+    id: 6,
+    url: "/test",
+    text: "test",
   }
 ]
 

@@ -7,16 +7,33 @@ import { links, socials } from "./assets/data";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
+  const linksContainerRef = useRef(null);
+  const linksRef = useRef(null);
 
-  function linksToggler() {
+  useEffect(() => {
+    const elementHeight = linksRef.current.getBoundingClientRect();
+
+    if (showLinks) {
+      linksContainerRef.current.style.height = `${elementHeight.height}px`;
+    } else {
+      linksContainerRef.current.style.height = 0;
+    }
+
+  }, [showLinks])
+
+  function toggleHandler() {
     setShowLinks(!showLinks);
   }
 
   return (
     <Wrapper>
       <div className="nav-center">
-        <NavHeader toggler={linksToggler} />
-        <Sidebar links={links} showLinks={showLinks} />
+        <NavHeader toggler={toggleHandler} />
+        <Sidebar
+          links={links}
+          linksContainerRef={linksContainerRef}
+          linksRef={linksRef}
+        />
         <SocialLinks socials={socials} />
       </div>
     </Wrapper>
