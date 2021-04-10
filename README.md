@@ -38,22 +38,42 @@
 
 ## 8. Lorem Ipsum Generator
 ![Lorem-Ipsum](https://i.ibb.co/yFH1451/lorem-ipsum.png)
->
 * see this app in action: https://tester-dummytext-generator.netlify.app/
+
+> Pointers: 
+    * slice
+    * min/max if statement
+
 
 ## 9. Color Tint/Shades Generator
 ![Color-Generator](https://i.ibb.co/mHBWFPn/color-tints-shades.png)
+
+> Pointers: 
+    * npm package -> "values.js"
+    * navigator.clipboard.writeText(value);
+
+## 10. Grocery Buddy
+![grocery-bud](https://i.ibb.co/3MFMYsH/grocery-buddy.png)
+
+> Pointers:
+    * setTimeout() / clearTimeout
+    * localStorage
+
+## 11. Navbar
+![navbar](https://i.ibb.co/WD6S202/navbar.png)
+
+> Pointers:
+    * useRef 
+    * getBoundingClientRef()
 
 https://i.ibb.co/9nmxT0X/stripe.png
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
 https://i.ibb.co/0syFR30/quiz.png
 https://i.ibb.co/w0Gs1gT/pagination.png
-https://i.ibb.co/WD6S202/navbar.png
 https://i.ibb.co/6wfKMLj/moviedb.png
 https://i.ibb.co/CHgyt9k/markdown-preview.png
 https://i.ibb.co/Y0hm3HH/hacker-news.png
-https://i.ibb.co/3MFMYsH/grocery-buddy.png
 https://i.ibb.co/5j27CT1/dark-mode.png
 https://i.ibb.co/HtGPYX1/cocktails.png
 https://i.ibb.co/xDwPdvt/cart.png
