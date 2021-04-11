@@ -66,6 +66,13 @@
     1. useRef() <br/>
     2. getBoundingClientRect()
 
+## 12. Sidebar Modal
+![navbar](https://i.ibb.co/WD6S202/navbar.png)
+
+> Pointers: <br/>
+    1. useContext <br/>
+    2. useContent custom hooks (! must include use... ex. useGlobalContext)
+
 https://i.ibb.co/9nmxT0X/stripe.png
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
