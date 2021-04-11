@@ -1,9 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useGlobalContext } from "../assets/context";
 
 const Submenu = () => {
+  const { submenu, openSubmenu } = useGlobalContext();
 
   return (
-    <h2>submenu component</h2>
+    <aside className={`submenu ${submenu && "show"}`}>
+      submenu
+    </aside>
   )
 }
 
