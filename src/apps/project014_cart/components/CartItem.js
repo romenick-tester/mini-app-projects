@@ -2,6 +2,7 @@ import React from "react";
 import { useGlobalContext } from "../assets/context";
 
 const CartItem = ({ id, img, title, price, amount }) => {
+  const { removeItem } = useGlobalContext();
 
   return (
     <article className="cart-item">
@@ -12,7 +13,7 @@ const CartItem = ({ id, img, title, price, amount }) => {
         {/* remove button */}
         <button
           className="remove-btn"
-          onClick={() => console.log("remove item")}
+          onClick={() => removeItem(id)}
         >
           remove
         </button>
