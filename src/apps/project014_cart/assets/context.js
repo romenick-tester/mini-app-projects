@@ -6,10 +6,18 @@ const url = "https://course-api.com/react-useReducer-cart-project";
 
 const AppContext = React.createContext();
 
-const AppProvider = ({ children }) => {
-  const [cart, setCart] = useState(cartItems)
+const initialState = {
+  loading: false,
+  cart: cartItems,
+  total: 0,
+  amount: 0,
+}
 
-  const vars = { cart };
+const AppProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const vars = { ...state };
+
   return (
     <AppContext.Provider value={{ ...vars }}>
       {children}
@@ -17,8 +25,8 @@ const AppProvider = ({ children }) => {
   )
 };
 
-export const useGlobalContext = () => {
+const useGlobalContext = () => {
   return useContext(AppContext);
 }
 
-export { AppContext, AppProvider };
+export { useGlobalContext, AppProvider };

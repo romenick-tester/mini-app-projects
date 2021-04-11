@@ -82,9 +82,19 @@
 * see this app in action: https://tester-stripe.netlify.app
 
 > Pointers: <br>
-    1. getBoundingClientRect()
-    2. e.target.classList.contains("thisclass")
-    3. onMouseOver 4. useContext 5. useRef
+    1. getBoundingClientRect() <br>
+    2. e.target.classList.contains("thisclass") <br>
+    3. onMouseOver <br> 
+    4. useContext 5. useRef
+
+## 13. Cart
+![cart](https://i.ibb.co/xDwPdvt/cart.png)
+* see this app in action: https://tester-cart.netlify.app
+
+> Pointers: <br>
+    1. useReducer() <br>
+    2. useContext() <br>
+    3. if conditional rendering
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
@@ -95,5 +105,4 @@ https://i.ibb.co/CHgyt9k/markdown-preview.png
 https://i.ibb.co/Y0hm3HH/hacker-news.png
 https://i.ibb.co/5j27CT1/dark-mode.png
 https://i.ibb.co/HtGPYX1/cocktails.png
-https://i.ibb.co/xDwPdvt/cart.png
 https://i.ibb.co/PTC7FmM/122551328-827671727987000-3253431235894150343-n.jpg
