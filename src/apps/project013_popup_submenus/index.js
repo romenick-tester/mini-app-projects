@@ -3,12 +3,17 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Sidebar from "./components/Sidebar";
 import Submenu from "./components/Submenu";
+import { AppProvider } from "./assets/context";
 
 function PopSubmenus() {
+  
   return (
-    <>
-      <h2>stripe submenus setup</h2>
-    </>
+    <AppProvider>
+      <Navbar />
+      <Sidebar />
+      <Hero />
+      <Submenu />
+    </AppProvider>
   )
 }
 
