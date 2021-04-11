@@ -2,8 +2,11 @@ const cartReducer = (state, action) => {
     const { type, payload } = action;
 
     switch (type) {
+        case "CLEAR_CART":
+            return { ...state, cart: [] };
+
         default:
-            console.log(payload);
+            console.log(state);
             return state;
     }
 }
