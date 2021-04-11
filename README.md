@@ -47,6 +47,7 @@
 
 ## 9. Color Tint/Shades Generator
 ![Color-Generator](https://i.ibb.co/mHBWFPn/color-tints-shades.png)
+* see this app in action: https://tester-tintnshades-generator.netlify.app
 
 > Pointers: <br/>
     1. npm package -> "values.js" <br/>
@@ -54,13 +55,15 @@
 
 ## 10. Grocery Buddy
 ![grocery-bud](https://i.ibb.co/3MFMYsH/grocery-buddy.png)
----
+* see this app in action: https://tester-grocery-buddy.netlify.app
+
 > Pointers: <br/>
     1. setTimeout() / clearTimeout <br/>
     2. localStorage
 
 ## 11. Navbar
 ![navbar](https://i.ibb.co/WD6S202/navbar.png)
+* see this app in action: https://tester-navbar.netlify.app
 
 > Pointers: <br/>
     1. useRef() <br/>
@@ -68,12 +71,19 @@
 
 ## 12. Sidebar Modal
 ![navbar](https://i.ibb.co/WD6S202/navbar.png)
+* see this app in action: https://tester-sidebar-modal.netlify.app
 
 > Pointers: <br/>
     1. useContext <br/>
     2. useContent custom hooks (! must include use... ex. useGlobalContext)
 
-https://i.ibb.co/9nmxT0X/stripe.png
+## 13. Popup Submenus
+![submenus](https://i.ibb.co/9nmxT0X/stripe.png)
+* see this app in action: https://tester-stripe.netlify.app
+
+> Pointers: <br>
+    1. ...
+
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
 https://i.ibb.co/0syFR30/quiz.png
