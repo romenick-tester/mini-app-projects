@@ -82,7 +82,9 @@
 * see this app in action: https://tester-stripe.netlify.app
 
 > Pointers: <br>
-    1. ...
+    1. getBoundingClientRect()
+    2. e.target.classList.contains("thisclass")
+    3. onMouseOver 4. useContext 5. useRef
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
