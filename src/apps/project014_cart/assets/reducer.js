@@ -37,6 +37,12 @@ const cartReducer = (state, action) => {
 
             return { ...state, total, amount }
 
+        case "DATA_LOADING":
+            return { ...state, loading: true };
+
+        case "DATA_SUCCESS":
+            return { ...state, loading: false, cart: payload };
+
         default:
             console.log(state);
             return state;

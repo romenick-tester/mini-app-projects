@@ -1,4 +1,4 @@
-import React, { useState, useContext, useReducer, useEffect } from "react";
+import React, { useContext, useReducer, useEffect } from "react";
 import cartItems from "./data";
 import reducer from "./reducer";
 
@@ -27,6 +27,21 @@ const AppProvider = ({ children }) => {
   function changeAmount(id, type) {
     dispatch({ type: "CHANGE_AMOUNT", payload: { id, type } });
   }
+
+  async function fetchData() {
+    dispatch({ type: "DATA_LOADING" });
+    try {
+      const response = await fetch(url);
+      const cart = await response.json();
+      dispatch({ type: "DATA_SUCCESS", payload: cart });
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   useEffect(() => {
     dispatch({ type: "GET_TOTALS" });
