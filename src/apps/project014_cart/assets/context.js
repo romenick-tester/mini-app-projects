@@ -28,6 +28,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "CHANGE_AMOUNT", payload: { id, type } });
   }
 
+  useEffect(() => {
+    dispatch({ type: "GET_TOTALS" });
+  }, [state.cart])
+
   const vars = { ...state };
   const funcs = { clearCart, removeItem, changeAmount };
   return (
