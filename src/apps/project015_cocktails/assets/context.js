@@ -10,6 +10,36 @@ const AppProvider = ({ children }) => {
   const [searchQuery, setSearchQuery] = useState("a");
   const [cocktails, setCocktails] = useState([]);
 
+  const fetchDrinksApi = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch(`${url}${searchQuery}`);
+      const data = await res.json();
+      const { drinks } = data;
+
+      if (drinks) {
+        const newDrinks = drinks.map((item) => {
+          const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } = item;
+
+          return { id: idDrink, name: strDrink, image: strDrinkThumb, info: strAlcoholic, glass: strGlass };
+        });
+
+        setCocktails(newDrinks);
+      } else {
+        setCocktails([]);
+      }
+
+      setLoading(false);
+    } catch (error) {
+      console.log(error.message);
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    fetchDrinksApi();
+  }, [searchQuery]);
+
   const vars = { loading, cocktails };
   const funcs = { setSearchQuery };
   return (

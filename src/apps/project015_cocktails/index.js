@@ -20,7 +20,6 @@ function Cockails() {
 function Index() {
   const data = useGlobalContext();
 
-  console.log(data);
   return (
     <Router>
       <Navbar />
