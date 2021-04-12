@@ -7,8 +7,20 @@ import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
 
 import "./assets/index.css";
+import { AppProvider, useGlobalContext } from "./assets/context";
 
 function Cockails() {
+  return (
+    <AppProvider>
+      <Index />
+    </AppProvider>
+  )
+}
+
+function Index() {
+  const data = useGlobalContext();
+
+  console.log(data);
   return (
     <Router>
       <Navbar />
