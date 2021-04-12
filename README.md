@@ -101,7 +101,7 @@
 * see this app in action: https://tester-cocktails.netlify.app
 
 > Pointers: <br>
-    1. 
+    1. routes with (react-router-dom) 
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
