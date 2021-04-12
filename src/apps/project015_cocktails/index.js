@@ -10,9 +10,15 @@ import "./assets/index.css";
 
 function Cockails() {
   return (
-    <div>
-      <h2>app component</h2>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/cocktail/:id" component={SingleCocktail} />
+        <Route path="*" component={Error} />
+      </Switch>
+    </Router>
   )
 }
 
