@@ -92,9 +92,16 @@
 * see this app in action: https://tester-cart.netlify.app
 
 > Pointers: <br>
-    1. useReducer() <br>
-    2. useContext() <br>
-    3. if conditional rendering
+    1. useReducer() & useContext() <br>
+    2. map(), filter() & reduce() <br>
+    3. fetch()
+
+## 14. Cocktails
+![cocktails](https://i.ibb.co/HtGPYX1/cocktails.png)
+* see this app in action: https://tester-cocktails.netlify.app
+
+> Pointers: <br>
+    1. 
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
@@ -104,5 +111,4 @@ https://i.ibb.co/6wfKMLj/moviedb.png
 https://i.ibb.co/CHgyt9k/markdown-preview.png
 https://i.ibb.co/Y0hm3HH/hacker-news.png
 https://i.ibb.co/5j27CT1/dark-mode.png
-https://i.ibb.co/HtGPYX1/cocktails.png
 https://i.ibb.co/PTC7FmM/122551328-827671727987000-3253431235894150343-n.jpg

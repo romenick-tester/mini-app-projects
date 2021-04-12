@@ -44,7 +44,6 @@ const cartReducer = (state, action) => {
             return { ...state, loading: false, cart: payload };
 
         default:
-            console.log(state);
             return state;
     }
 }
