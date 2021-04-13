@@ -40,8 +40,8 @@
 ![Lorem-Ipsum](https://i.ibb.co/yFH1451/lorem-ipsum.png)
 * see this app in action: https://tester-dummytext-generator.netlify.app/
 
-> Pointers: <br/>
-    1. slice <br/>
+> Pointers: <br>
+    1. slice <br>
     2. min/max if statement
 
 
@@ -49,32 +49,32 @@
 ![Color-Generator](https://i.ibb.co/mHBWFPn/color-tints-shades.png)
 * see this app in action: https://tester-tintnshades-generator.netlify.app
 
-> Pointers: <br/>
-    1. npm package -> "values.js" <br/>
+> Pointers: <br>
+    1. npm package -> "values.js" <br>
     2. navigator.clipboard.writeText(value);
 
 ## 10. Grocery Buddy
 ![grocery-bud](https://i.ibb.co/3MFMYsH/grocery-buddy.png)
 * see this app in action: https://tester-grocery-buddy.netlify.app
 
-> Pointers: <br/>
-    1. setTimeout() / clearTimeout <br/>
+> Pointers: <br>
+    1. setTimeout() / clearTimeout <br>
     2. localStorage
 
 ## 11. Navbar
 ![navbar](https://i.ibb.co/WD6S202/navbar.png)
 * see this app in action: https://tester-navbar.netlify.app
 
-> Pointers: <br/>
-    1. useRef() <br/>
+> Pointers: <br>
+    1. useRef() <br>
     2. getBoundingClientRect()
 
 ## 12. Sidebar Modal
 ![navbar](https://i.ibb.co/WD6S202/navbar.png)
 * see this app in action: https://tester-sidebar-modal.netlify.app
 
-> Pointers: <br/>
-    1. useContext <br/>
+> Pointers: <br>
+    1. useContext <br>
     2. useContent custom hooks (! must include use... ex. useGlobalContext)
 
 ## 13. Popup Submenus
@@ -101,7 +101,8 @@
 * see this app in action: https://tester-cocktails.netlify.app
 
 > Pointers: <br>
-    1. routes with (react-router-dom) 
+    1. routes with (react-router-dom) <br> 
+    2. uncontrolled input (useRef())
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
