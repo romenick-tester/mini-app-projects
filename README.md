@@ -103,6 +103,8 @@
 > Pointers: <br>
     1. routes with (react-router-dom) <br> 
     2. uncontrolled input (useRef())
+    3. useParams() and useLocation() from "react-router-dom"
+
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
