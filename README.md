@@ -102,8 +102,10 @@
 
 > Pointers: <br>
     1. routes with (react-router-dom) <br> 
-    2. uncontrolled input (useRef())
-    3. useParams() and useLocation() from "react-router-dom"
+    2. uncontrolled input (useRef()) <br>
+    3. useParams() and useLocation() from "react-router-dom" <br>
+    4. useCallback() <br>
+    5. fetch()
 
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
