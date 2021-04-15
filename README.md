@@ -87,7 +87,7 @@
     3. onMouseOver <br> 
     4. useContext 5. useRef
 
-## 13. Cart
+## 14. Cart
 ![cart](https://i.ibb.co/xDwPdvt/cart.png)
 * see this app in action: https://tester-cart.netlify.app
 
@@ -96,7 +96,7 @@
     2. map(), filter() & reduce() <br>
     3. fetch()
 
-## 14. Cocktails
+## 15. Cocktails
 ![cocktails](https://i.ibb.co/HtGPYX1/cocktails.png)
 * see this app in action: https://tester-cocktails.netlify.app
 
@@ -107,13 +107,20 @@
     4. useCallback() <br>
     5. fetch()
 
+## 16. Markdown Preview
+![markdown](https://i.ibb.co/CHgyt9k/markdown-preview.png)
+* see this app in action: https://tester-markdown-preview.netlify.app
+
+> Pointers: <br>
+    1. controlled input
+    2. React-Markdown 
+
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/wzY5Z66/random-user.png
 https://i.ibb.co/0syFR30/quiz.png
 https://i.ibb.co/w0Gs1gT/pagination.png
 https://i.ibb.co/6wfKMLj/moviedb.png
-https://i.ibb.co/CHgyt9k/markdown-preview.png
 https://i.ibb.co/Y0hm3HH/hacker-news.png
 https://i.ibb.co/5j27CT1/dark-mode.png
 https://i.ibb.co/PTC7FmM/122551328-827671727987000-3253431235894150343-n.jpg
