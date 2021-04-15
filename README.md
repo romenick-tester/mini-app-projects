@@ -112,12 +112,18 @@
 * see this app in action: https://tester-markdown-preview.netlify.app
 
 > Pointers: <br>
-    1. controlled input
+    1. controlled input <br>
     2. React-Markdown 
+
+## 17. Random Person
+![random person](https://i.ibb.co/wzY5Z66/random-user.png)
+* see this app in action: https://tester-random-user.netlify.app
+
+> Pointers: <br>
+    1. 
 
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
-https://i.ibb.co/wzY5Z66/random-user.png
 https://i.ibb.co/0syFR30/quiz.png
 https://i.ibb.co/w0Gs1gT/pagination.png
 https://i.ibb.co/6wfKMLj/moviedb.png
