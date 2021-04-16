@@ -12,7 +12,11 @@ function Pagination() {
     useEffect(() => {
         if (loading) return;
         setFollowers(data[page]);
-    }, [loading, data, page]);
+    }, [loading/* !important */, data, page /* !important */]);
+
+    const handlePage = (index) => {
+        setPage(index);
+    }
 
     return (
         <main>
@@ -26,6 +30,22 @@ function Pagination() {
                         return <Follower key={follower.id} {...follower} />
                     })}
                 </div>
+                {!loading && (
+                    <div className="btn-container">
+                        {data.map((_, index) => {
+                            return (
+                                <button
+                                    type="button"
+                                    className={`page-btn ${index === page && "active-btn"}`}
+                                    key={index}
+                                    onClick={() => handlePage(index)}
+                                >
+                                    {index + 1}
+                                </button>
+                            )
+                        })}
+                    </div>
+                )}
             </section>
         </main>
     )
