@@ -124,9 +124,15 @@
     2. data-<name> + e.target.dataset.<name> <br>
     3. *access values from object dynamically -> person["string_here"]
 
+## 18. Pagination
+![random person](https://i.ibb.co/w0Gs1gT/pagination.png)
+* see this app in action: https://tester-pagination.netlify.app
+
+> Pointers: <br>
+    1. custom fetch function => **useFetch()** <br>
+
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/0syFR30/quiz.png
-https://i.ibb.co/w0Gs1gT/pagination.png
 https://i.ibb.co/6wfKMLj/moviedb.png
 https://i.ibb.co/Y0hm3HH/hacker-news.png
 https://i.ibb.co/5j27CT1/dark-mode.png
