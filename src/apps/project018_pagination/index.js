@@ -5,7 +5,14 @@ import Follower from "./Follower";
 import "./assets/index.css";
 
 function Pagination() {
-    const { loading, data: followers } = useFetch();
+    const { loading, data } = useFetch();
+    const [page, setPage] = useState(0);
+    const [followers, setFollowers] = useState([]);
+
+    useEffect(() => {
+        if (loading) return;
+        setFollowers(data[page]);
+    }, [loading, data, page]);
 
     return (
         <main>
