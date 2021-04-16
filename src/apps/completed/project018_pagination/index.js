@@ -18,6 +18,26 @@ function Pagination() {
         setPage(index);
     }
 
+    const nextPage = () => {
+        setPage((state) => {
+            let nextPage = state + 1;
+            if (nextPage > data.length - 1) {
+                nextPage = 0;
+            }
+            return nextPage;
+        })
+    }
+
+    const prevPage = () => {
+        setPage((state) => {
+            let prevPage = state - 1;
+            if (prevPage < 0) {
+                prevPage = data.length - 1;
+            }
+            return prevPage;
+        })
+    }
+
     return (
         <main>
             <div className="section-title">
@@ -32,6 +52,13 @@ function Pagination() {
                 </div>
                 {!loading && (
                     <div className="btn-container">
+                        <button
+                            type="button"
+                            className="prev-btn"
+                            onClick={prevPage}
+                        >
+                            prev
+                        </button>
                         {data.map((_, index) => {
                             return (
                                 <button
@@ -44,6 +71,13 @@ function Pagination() {
                                 </button>
                             )
                         })}
+                        <button
+                            type="button"
+                            className="next-btn"
+                            onClick={nextPage}
+                        >
+                            next
+                        </button>
                     </div>
                 )}
             </section>

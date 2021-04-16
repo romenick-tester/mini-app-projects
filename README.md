@@ -131,7 +131,8 @@
 > Pointers: <br>
     1. custom fetch function => **useFetch()** <br>
     2. Array.from({ length: NUMBER }, (_ , index) => {}) <br>
-    3. Math.ceil / Array.splice(start, end)
+    3. Math.ceil / Array.splice(start, end) <br>
+    4. prev and next logic
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/0syFR30/quiz.png
