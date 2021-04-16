@@ -32,7 +32,7 @@ function RandomPerson() {
                     street: number + " " + name,
                     name: first + " " + last
                 }
-                console.log(newPerson);
+
                 setPerson(newPerson);
                 setTitle("name");
                 setValue(newPerson.name);
@@ -52,7 +52,11 @@ function RandomPerson() {
     }, []);
 
     const handleValue = (e) => {
-
+        if (e.target.classList.contains("icon")) {
+            const newVal = e.target.dataset.label;
+            setTitle(newVal);
+            setValue(person[newVal]);
+        }
     }
 
     return (

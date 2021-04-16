@@ -120,8 +120,9 @@
 * see this app in action: https://tester-random-user.netlify.app
 
 > Pointers: <br>
-    1. 
-
+    1. e.target.classList.contains("icon") <br>
+    2. data-<name> + e.target.dataset.<name> <br>
+    3. *access values from object dynamically -> person["string_here"]
 
 https://i.ibb.co/Ns8kNyB/stock-photos.png
 https://i.ibb.co/0syFR30/quiz.png
