@@ -125,7 +125,7 @@
     3. *access values from object dynamically -> person["string_here"]
 
 ## 18. Pagination
-![random person](https://i.ibb.co/w0Gs1gT/pagination.png)
+![pagination](https://i.ibb.co/w0Gs1gT/pagination.png)
 * see this app in action: https://tester-pagination.netlify.app
 
 > Pointers: <br>
@@ -134,7 +134,15 @@
     3. Math.ceil / Array.splice(start, end) <br>
     4. prev and next logic
 
-https://i.ibb.co/Ns8kNyB/stock-photos.png
+## 19. Stock Photos
+![stock photos](https://i.ibb.co/Ns8kNyB/stock-photos.png)
+* see this app in action: https://tester-stock-photos.netlify.app
+
+> Pointers: <br>
+    1. REACT_APP_CLIENT_ID (.env) <br>
+    2. 
+
+
 https://i.ibb.co/0syFR30/quiz.png
 https://i.ibb.co/6wfKMLj/moviedb.png
 https://i.ibb.co/Y0hm3HH/hacker-news.png
