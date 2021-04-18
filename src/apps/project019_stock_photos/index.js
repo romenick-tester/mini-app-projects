@@ -5,7 +5,7 @@ import Photo from "./Photo";
 import "./assets/index.css";
 
 const mainUrl = `https://api.unsplash.com/photos/`
-const searchUrl = `https://api.unsplash.com/search/photos/`
+//const searchUrl = `https://api.unsplash.com/search/photos/`
 const clientID = `?client_id=${process.env.REACT_APP_ACCESS_KEY}`
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       const data = await res.json();
 
       if (data) {
-        console.log(data);
+        setPhotos(data)
       } else {
         setPhotos([]);
       }
@@ -35,12 +35,33 @@ function App() {
     fetchImages();
   }, []);
 
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   if (loading) {
     return <h2>loading...</h2>
   }
 
   return (
-    <h2>stock photos starter</h2>
+    <main>
+      <section className="search">
+        <form className="search-form">
+          <input type="text" className="form-input" placeholder="search" />
+          <button type="submit" className="submit-btn" onClick={handleSubmit} >
+            <FaSearch />
+          </button>
+        </form>
+      </section>
+      <section className="photos">
+        <div className="photos-center">
+          {photos.map((photo) => {
+            return <Photo key={photo.id} {...photo} />
+          })}
+        </div>
+        {loading && <h2 className="loading">loading...</h2>}
+      </section>
+    </main>
   )
 }
 
