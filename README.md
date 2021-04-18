@@ -142,9 +142,16 @@
     2. addEventListener("scroll", () => {}) / removeEventListener() <br>
     3. window.innerHeight/window.scrollY/document.body.scrollHeight
 
+## 20. Dark Mode
+![darko mode](https://i.ibb.co/5j27CT1/dark-mode.png)
+* see this app in action: https://tester-dark-mode.netlify.app
+
+> Pointers: <br>
+    1. 
+
 
 https://i.ibb.co/0syFR30/quiz.png
 https://i.ibb.co/6wfKMLj/moviedb.png
 https://i.ibb.co/Y0hm3HH/hacker-news.png
-https://i.ibb.co/5j27CT1/dark-mode.png
+
 https://i.ibb.co/PTC7FmM/122551328-827671727987000-3253431235894150343-n.jpg
