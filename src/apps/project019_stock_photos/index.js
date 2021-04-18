@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { FaSearch } from "react-icons/fa";
 import Photo from "./Photo";
 
@@ -10,17 +10,21 @@ const clientID = `?client_id=${process.env.REACT_APP_ACCESS_KEY}`
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [photos, setPhotos] = useState([])
+  const [photos, setPhotos] = useState([]);
+  const [page, setPage] = useState(1);
 
-  async function fetchImages() {
+  const fetchImages = useCallback(async () => {
     setLoading(true);
-    let url = `${mainUrl}${clientID}`;
+    let urlPage = `&page=${page}`
+    let url = `${mainUrl}${clientID}${urlPage}`;
     try {
       const res = await fetch(url);
       const data = await res.json();
 
       if (data) {
-        setPhotos(data)
+        setPhotos((state) => {
+          return [...state, ...data]
+        });
       } else {
         setPhotos([]);
       }
@@ -29,18 +33,28 @@ function App() {
       console.error(error.message);
       setLoading(false);
     }
-  }
+  }, [page])
 
   useEffect(() => {
     fetchImages();
-  }, []);
+  }, [fetchImages]);
+
+  useEffect(() => {
+    const event = window.addEventListener("scroll", () => {
+      if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight - 5 && !loading) {
+        setPage((state) => {
+          return state + 1;
+        });
+      }
+    });
+
+    return () => {
+      window.removeEventListener("scroll", event);
+    }
+  }, [loading, page]);
 
   function handleSubmit(e) {
     e.preventDefault();
-  }
-
-  if (loading) {
-    return <h2>loading...</h2>
   }
 
   return (
@@ -55,8 +69,8 @@ function App() {
       </section>
       <section className="photos">
         <div className="photos-center">
-          {photos.map((photo) => {
-            return <Photo key={photo.id} {...photo} />
+          {photos.map((photo, index) => {
+            return <Photo key={photo.id + index} {...photo} />
           })}
         </div>
         {loading && <h2 className="loading">loading...</h2>}

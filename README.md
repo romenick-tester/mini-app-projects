@@ -131,7 +131,6 @@
 > Pointers: <br>
     1. custom fetch function => **useFetch()** <br>
     2. Array.from({ length: NUMBER }, (_ , index) => {}) <br>
-    3. Math.ceil / Array.splice(start, end) <br>
     4. prev and next logic
 
 ## 19. Stock Photos
@@ -140,7 +139,8 @@
 
 > Pointers: <br>
     1. REACT_APP_CLIENT_ID (.env) <br>
-    2. 
+    2. addEventListener("scroll", () => {}) / removeEventListener() <br>
+    3. window.innerHeight/window.scrollY/document.body.scrollHeight
 
 
 https://i.ibb.co/0syFR30/quiz.png
