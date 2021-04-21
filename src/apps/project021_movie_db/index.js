@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { AppProvider, useGlobalContext } from "./assets/context";
+import { AppProvider } from "./assets/context";
 import Home from "./components/Home";
 import Movie from "./components/SingleMovie";
 
@@ -15,8 +15,6 @@ function MovieDB() {
 }
 
 const Index = () => {
-  const data = useGlobalContext();
-  console.log(data);
   return (
     <Router>
       <Switch>
