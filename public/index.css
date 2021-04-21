@@ -1,0 +1,25 @@
+:root {
+    --dark-clr1: #4b778d;
+    --prime-clr1: #28b5b5;
+    --light-clr1: #8fd9a8;
+    --light-clr2: #d2e69c;
+
+    --desktopW: 1920px; --deskstopH: 1080px; 
+    --laptopW: 1366px; --laptopH: 768px;
+    --tabletW: 1024px; --tabletH: 600px;
+    --phoneW: 320px; --phoneH: 480px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: yellowgreen;
+}
