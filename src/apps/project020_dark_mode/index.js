@@ -4,12 +4,24 @@ import Article from "./Article";
 
 import "./assets/index.css";
 
+// const getThemeFromStorage = () => {
+//   let theme = "light-theme"
+//   if(localStorage.getItem("theme")) {
+//     theme = localStorage.getItem("theme")
+//   }
+//   return theme;
+// }
+
+const getThemeFromStorage = localStorage.getItem("theme") ? localStorage.getItem("theme") : "light-theme";
+
 function DarkMode() {
-  const [theme, setTheme] = useState("light-theme");
+  const [theme, setTheme] = useState(getThemeFromStorage);
 
   useEffect(() => {
     document.documentElement.className = theme;
-  }, [theme])
+
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   function toggleTheme() {
     if(theme === "light-theme") {
