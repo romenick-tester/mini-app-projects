@@ -7,11 +7,11 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
 
-  return <AppContext.Provider value="hello">{children}</AppContext.Provider>
+  return <AppContext.Provider value={{msg: "hello"}}>{children}</AppContext.Provider>
 };
 
 const useGlobalContext = () => {
-  return useContext(AppContext)
+  return useContext(AppContext);
 };
 
-export { AppContext, AppProvider, useGlobalContext, API_ENDPOINT };
+export { AppProvider, useGlobalContext, API_ENDPOINT };
