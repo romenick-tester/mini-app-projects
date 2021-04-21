@@ -3,8 +3,21 @@
 Global Styles
 ===============
 */
-
+/* 
 :root {
+  --clr-bcg: #fff;
+  --clr-font: #282c35;
+  --clr-primary: #d23669;
+}
+ */
+
+.dark-theme {
+  --clr-bcg: #282c35;
+  --clr-font: #fff;
+  --clr-primary: lightsalmon;
+}
+
+.light-theme {
   --clr-bcg: #fff;
   --clr-font: #282c35;
   --clr-primary: #d23669;
