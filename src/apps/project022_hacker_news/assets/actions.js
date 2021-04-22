@@ -1,5 +1,20 @@
-export const SET_LOADING = "SET_LOADING";
-export const SET_STORIES = "SET_STORIES";
-export const REMOVE_STORY = "REMOVE_STORY";
-export const HANDLE_PAGE = "HANDLE_PAGE";
-export const HANDLE_SEARCH = "HANDLE_SEARCH";
+import { SET_LOADING, SET_STORIES, SET_ERROR } from "./constants";
+
+const API_ENDPOINT = "https://hn.algolia.com/api/v1/search?";
+
+const fetchStories = async (dispatch) => {
+    dispatch({ type: SET_LOADING });
+
+    try {
+        const res = await fetch(`${API_ENDPOINT}`);
+        const data = await res.json();
+
+        dispatch({ type: SET_STORIES, payload: data.hits });
+
+    } catch (err) {
+        console.error(err.message);
+        dispatch({ type: SET_ERROR });
+    }
+}
+
+export { fetchStories };
