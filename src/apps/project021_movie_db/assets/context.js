@@ -13,7 +13,13 @@ const AppProvider = ({ children }) => {
 
   const fetchMovies = async () => {
     setLoading(true);
-    let url = `${API_ENDPOINT}&s=${query}`;
+    let url;
+
+    if(query) {
+      url = `${API_ENDPOINT}&s=${query}`;
+    } else {
+      url = `${API_ENDPOINT}&s=avenger`;
+    }
 
     try {
       const res = await fetch(url);
@@ -36,6 +42,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     fetchMovies();
+    // eslint-disable-next-line
   }, [query]);
 
   const vars = { loading, error, movies, query };
