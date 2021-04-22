@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 
 const apiKey = process.env.REACT_APP_MOVIEDB_APIKEY;
 const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${apiKey}`; // make sure to use https
+const noImage = "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
 
 const AppContext = React.createContext();
 
@@ -55,4 +56,4 @@ const useGlobalContext = () => {
   return useContext(AppContext);
 };
 
-export { AppProvider, useGlobalContext, API_ENDPOINT };
+export { AppProvider, useGlobalContext, API_ENDPOINT, noImage };
