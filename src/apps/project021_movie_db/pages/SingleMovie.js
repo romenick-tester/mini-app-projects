@@ -1,40 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { API_ENDPOINT, noImage } from "../assets/context";
+import { noImage } from "../assets/context";
+import useFetch from "../assets/useFetch";
 
 const SingleMovie = ({ match }) => {
-  const [movie, setMovie] = useState({});
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState({show: false, msg: ""});
-
   const movieID = match.params.id;
 
-  const fetchMovie = async function() {
-    setLoading(true);
-    try {
-      const res = await fetch(`${API_ENDPOINT}&i=${movieID}`);
-      const data = await res.json();
-
-      if(data.Response === "True") {
-        setMovie(data);
-        setError({show: false, msg: ""});
-      } else {
-        setMovie({});
-        setError({ show: true, msg: data.Error });
-      }
-
-      setLoading(false);
-    } catch (err) {
-      console.error(err.message);
-      setError({ show: true, msg: err.message });
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    fetchMovie();
-    // eslint-disable-next-line
-  }, [movieID]);
+  const { loading, error, data: movie } = useFetch(`&i=${movieID}`);
 
   if(loading) {
     return <div className="loading"></div>
