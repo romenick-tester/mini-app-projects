@@ -162,7 +162,8 @@
 * see this app in action: https://tester-hackers-news.netlify.app
 
 > Pointers: <br>
-    1. 
+    1. useContext => context => useGlobalContext <br>
+    2. useReducer => reducers + actions + constants
 
 
 https://i.ibb.co/0syFR30/quiz.png <br>
