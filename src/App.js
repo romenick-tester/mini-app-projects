@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from "./apps/project021_movie_db";
+import Project from "./apps/project022_hacker_news";
 
 function App() {
 

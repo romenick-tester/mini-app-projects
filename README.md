@@ -155,9 +155,15 @@
 * see this app in action: https://tester-moviedb.netlify.app
 
 > Pointers: <br>
+    1. useContext / useFetch() <-- custom hook 
+
+## 22. Hacker News
+![hacker news](https://i.ibb.co/Y0hm3HH/hacker-news.png)
+* see this app in action: https://tester-hackers-news.netlify.app
+
+> Pointers: <br>
     1. 
 
 
-https://i.ibb.co/0syFR30/quiz.png
-https://i.ibb.co/Y0hm3HH/hacker-news.png
+https://i.ibb.co/0syFR30/quiz.png <br>
 https://i.ibb.co/PTC7FmM/122551328-827671727987000-3253431235894150343-n.jpg
