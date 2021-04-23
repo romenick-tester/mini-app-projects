@@ -14,9 +14,12 @@ const reducer = (state, action) => {
             return { ...state, loading: false, error: { show: true, msg: "error" } };
 
         case REMOVE_STORY:
-            const tempHits = state.hits.filter((item) => item.objectID !== payload);
+            const tempHits1 = state.hits.filter((item) => item.objectID !== payload);
 
-            return { ...state, hits: tempHits }
+            return { ...state, hits: tempHits1 };
+
+        case HANDLE_SEARCH:
+            return { ...state, query: payload, page: 0 };
 
         default:
             return state;

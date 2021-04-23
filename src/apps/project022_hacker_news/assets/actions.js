@@ -1,6 +1,6 @@
-import { SET_LOADING, SET_STORIES, SET_ERROR, REMOVE_STORY } from "./constants";
+import { SET_LOADING, SET_STORIES, SET_ERROR, REMOVE_STORY, HANDLE_SEARCH } from "./constants";
 
-const fetchStories = async (url,dispatch) => {
+const fetchStories = async (url, dispatch) => {
     dispatch({ type: SET_LOADING });
 
     try {
@@ -19,4 +19,8 @@ const removeStory = (id, dispatch) => {
     dispatch({ type: REMOVE_STORY, payload: id });
 }
 
-export { fetchStories, removeStory };
+const searchStory = (query, dispatch) => {
+    dispatch({ type: HANDLE_SEARCH, payload: query })
+}
+
+export { fetchStories, removeStory, searchStory };
