@@ -2,13 +2,13 @@ import React from "react";
 import { useGlobalContext } from "../assets/context";
 
 const Stories = () => {
-  const { loading, error, stories } = useGlobalContext();
+  const { loading, error, hits: stories, ...rest } = useGlobalContext();
 
   if(loading) {
     return <div className="loading"></div>
   }
 
-  console.log(stories);
+  console.log(rest);
 
   return (
     <>

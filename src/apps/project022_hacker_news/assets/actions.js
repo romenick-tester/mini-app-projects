@@ -1,15 +1,13 @@
 import { SET_LOADING, SET_STORIES, SET_ERROR } from "./constants";
 
-const API_ENDPOINT = "https://hn.algolia.com/api/v1/search?";
-
-const fetchStories = async (dispatch) => {
+const fetchStories = async (url,dispatch) => {
     dispatch({ type: SET_LOADING });
 
     try {
-        const res = await fetch(`${API_ENDPOINT}`);
+        const res = await fetch(`${url}`);
         const data = await res.json();
 
-        dispatch({ type: SET_STORIES, payload: data.hits });
+        dispatch({ type: SET_STORIES, payload: { hits: data.hits, nbPages: data.nbPages } });
 
     } catch (err) {
         console.error(err.message);

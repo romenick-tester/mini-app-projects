@@ -8,7 +8,7 @@ const reducer = (state, action) => {
             return { ...state, loading: true };
 
         case SET_STORIES:
-            return { ...state, loading: false, stories: payload };
+            return { ...state, loading: false, ...payload };
 
         case SET_ERROR:
             return { ...state, loading: false, stories: [], error: { show: true, msg: "error" } };
