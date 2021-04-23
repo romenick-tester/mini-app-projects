@@ -163,7 +163,8 @@
 
 > Pointers: <br>
     1. useContext => context => useGlobalContext <br>
-    2. useReducer => reducers + actions + constants
+    2. useReducer => reducers + actions + constants | dispatch as function parameter <br>
+    3. a tag => target='_blank' rel='noopener noreferrer'
 
 
 https://i.ibb.co/0syFR30/quiz.png <br>
