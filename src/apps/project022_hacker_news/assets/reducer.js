@@ -21,6 +21,22 @@ const reducer = (state, action) => {
         case HANDLE_SEARCH:
             return { ...state, query: payload, page: 0 };
 
+        case HANDLE_PAGE:
+            let nextPage;
+            if(payload === "inc") {
+                nextPage = state.page + 1;
+                if(nextPage > state.nbPages - 1) {
+                    nextPage = 0;
+                }
+            } else {
+                nextPage = state.page - 1;
+                if(nextPage < 1) {
+                    nextPage = state.nbPages - 1;
+                } 
+            }
+            
+            return { ...state, page: nextPage };
+
         default:
             return state;
     }

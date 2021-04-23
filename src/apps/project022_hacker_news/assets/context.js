@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useReducer } from "react";
-import { fetchStories, removeStory, searchStory } from "./actions";
+import { fetchStories, removeStory, searchStory, changePage } from "./actions";
 import reducer from "./reducer";
 
 const API_ENDPOINT = "https://hn.algolia.com/api/v1/search";
@@ -32,7 +32,11 @@ const AppProvider = ({ children }) => {
     searchStory(query, dispatch);
   };
 
-  return <AppContext.Provider value={{...state, removeArticle, handleQuery}}>{children}</AppContext.Provider>
+  const handlePage = function(action) {
+    changePage(action, dispatch);
+  };
+
+  return <AppContext.Provider value={{...state, removeArticle, handleQuery, handlePage}}>{children}</AppContext.Provider>
 };
 
 const useGlobalContext = () => {

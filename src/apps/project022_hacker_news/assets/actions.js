@@ -1,4 +1,4 @@
-import { SET_LOADING, SET_STORIES, SET_ERROR, REMOVE_STORY, HANDLE_SEARCH } from "./constants";
+import { SET_LOADING, SET_STORIES, SET_ERROR, REMOVE_STORY, HANDLE_SEARCH, HANDLE_PAGE } from "./constants";
 
 const fetchStories = async (url, dispatch) => {
     dispatch({ type: SET_LOADING });
@@ -23,4 +23,8 @@ const searchStory = (query, dispatch) => {
     dispatch({ type: HANDLE_SEARCH, payload: query })
 }
 
-export { fetchStories, removeStory, searchStory };
+const changePage = (action, dispatch) => {
+    dispatch({ type: HANDLE_PAGE, payload: action })
+}
+
+export { fetchStories, removeStory, searchStory, changePage };
