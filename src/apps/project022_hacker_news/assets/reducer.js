@@ -11,7 +11,12 @@ const reducer = (state, action) => {
             return { ...state, loading: false, ...payload };
 
         case SET_ERROR:
-            return { ...state, loading: false, stories: [], error: { show: true, msg: "error" } };
+            return { ...state, loading: false, error: { show: true, msg: "error" } };
+
+        case REMOVE_STORY:
+            const tempHits = state.hits.filter((item) => item.objectID !== payload);
+
+            return { ...state, hits: tempHits }
 
         default:
             return state;

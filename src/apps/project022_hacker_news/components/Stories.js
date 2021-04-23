@@ -2,10 +2,14 @@ import React from "react";
 import { useGlobalContext } from "../assets/context";
 
 const Stories = () => {
-  const { loading, error, hits: stories } = useGlobalContext();
+  const { loading, error, hits: stories, removeArticle } = useGlobalContext();
 
   if(loading) {
     return <div className="loading"></div>
+  }
+
+  function removeHandler(id) {
+    removeArticle(id);
   }
 
   return (
@@ -25,7 +29,7 @@ const Stories = () => {
               >
                 read more
               </a>
-              <button className="remove-btn">remove</button>
+              <button type="button" className="remove-btn" onClick={() => removeHandler(objectID)} >remove</button>
             </div>
           </article>
         )
