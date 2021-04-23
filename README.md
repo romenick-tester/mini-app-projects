@@ -164,8 +164,14 @@
 > Pointers: <br>
     1. useContext => context => useGlobalContext <br>
     2. useReducer => reducers + actions + constants | dispatch as function parameter <br>
-    3. a tag => target='_blank' rel='noopener noreferrer'
+    3. a tag => target='_blank' rel='noopener noreferrer' <br>
+    4. prev and next buttons if logic
 
+## 23. Quiz
+![quiz](https://i.ibb.co/0syFR30/quiz.png)
+* see this app in action: https://tester-quiz.netlify.app
 
-https://i.ibb.co/0syFR30/quiz.png <br>
+> Pointers: <br>
+    1. 
+    
 https://i.ibb.co/PTC7FmM/122551328-827671727987000-3253431235894150343-n.jpg

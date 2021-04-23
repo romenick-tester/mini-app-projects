@@ -1,5 +1,5 @@
-import React from 'react';
-import Project from "./apps/project022_hacker_news";
+import React from "react";
+import Project from "./apps/project023_quiz";
 
 function App() {
 
