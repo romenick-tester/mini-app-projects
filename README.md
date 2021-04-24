@@ -172,6 +172,7 @@
 * see this app in action: https://tester-quiz.netlify.app
 
 > Pointers: <br>
-    1. 
+    1. context / useGlobalContext <br>
+    2. html element attribute 'dangerouslySetInnerHTML' *display html string*
     
 https://i.ibb.co/PTC7FmM/122551328-827671727987000-3253431235894150343-n.jpg

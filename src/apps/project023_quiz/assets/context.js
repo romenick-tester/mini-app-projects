@@ -35,7 +35,7 @@ const AppProvider = ({ children }) => {
         setQuestions(data.results);
         setError(false);
         setLoading(false);
-        setWaiting(true);
+        setWaiting(false); //must switch to true later
       } else {
         setWaiting(true);
         setError(true);
@@ -51,8 +51,26 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     fetchQuestions();
   }, []);
+
+  const nextQuestion = function() {
+    setIndex((currentValue) => {
+      let index = currentValue + 1;
+      if(index > questions.length - 1) {
+        // openModal();
+        index = 0; //remove later
+      }
+      return index;
+    })
+  }
+
+  const checkAnswer = function(value) {
+    if(value) {
+      setCorrect((currentValue) => currentValue + 1)
+    }
+    nextQuestion();
+  }
   
-  const values = { waiting, loading, questions, index, correct, error, modal };
+  const values = { waiting, loading, questions, index, correct, error, modal, nextQuestion, checkAnswer };
   return (
     <AppContext.Provider value={{...values}}>{children}</AppContext.Provider>
   )

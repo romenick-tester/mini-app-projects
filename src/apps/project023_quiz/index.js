@@ -15,7 +15,7 @@ function Quiz() {
 };
 
 function Index() {
-  const { waiting, loading, questions, index, correct } = useGlobalContext();
+  const { waiting, loading, questions, index, correct, nextQuestion, checkAnswer } = useGlobalContext();
 
   if(waiting) {
     return <SetupForm />
@@ -26,10 +26,30 @@ function Index() {
   }
 
   const { correct_answer, incorrect_answers, question } = questions[index];
+  const answers = [...incorrect_answers, correct_answer];
   return (
-    <>
-      <h2>quiz starter</h2>
-    </>
+    <main>
+      {/* <Modal /> */}
+      <section className="quiz">
+        <p className="correct-answers">correct answers : {correct} / {index}</p>
+        <article className="container">
+          <h2 dangerouslySetInnerHTML={{__html: question}} />
+          <div className="btn-container">
+            {answers.map((answer, index) => {
+              return (
+                <button 
+                  key={index} 
+                  className="answer-btn"
+                  onClick={() => checkAnswer(answer === correct_answer)} 
+                  dangerouslySetInnerHTML={{__html: answer}} 
+                />
+              )
+            })}
+          </div>
+        </article>
+        <button className="next-question" onClick={nextQuestion}>next question</button>
+      </section>
+    </main>
   )
 }
 
