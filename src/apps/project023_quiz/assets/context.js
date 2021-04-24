@@ -56,8 +56,8 @@ const AppProvider = ({ children }) => {
     setIndex((currentValue) => {
       let index = currentValue + 1;
       if(index > questions.length - 1) {
-        // openModal();
-        index = 0; //remove later
+        index = 0;
+        openModal();
       }
       return index;
     })
@@ -69,8 +69,18 @@ const AppProvider = ({ children }) => {
     }
     nextQuestion();
   }
+
+  const openModal = function(){
+    setModal(true);
+  };
   
-  const values = { waiting, loading, questions, index, correct, error, modal, nextQuestion, checkAnswer };
+  const closeModal = function(){
+    setWaiting(true);
+    setCorrect(0);
+    setModal(false);
+  };
+
+  const values = { waiting, loading, questions, index, correct, error, modal, nextQuestion, checkAnswer, closeModal };
   return (
     <AppContext.Provider value={{...values}}>{children}</AppContext.Provider>
   )
