@@ -4,3 +4,5 @@ scss
 images
 temp
 debug.log
+/package-lock.json
+/package.json
