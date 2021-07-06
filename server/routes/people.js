@@ -3,6 +3,6 @@ import { getPeople } from "../controllers/people.js"
 
 const router = express.Router()
 
-router.get("/", getPeople)
+router.get("/birthday/:month", getPeople)
 
 export default router;
