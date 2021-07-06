@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
 const table = {
   sports: 21,
@@ -21,8 +21,8 @@ const AppProvider = ({ children }) => {
   const [error, setError] = useState(false);
   const [modal, setModal] = useState(false);
   const [quiz, setQuiz] = useState({ amount: 10, category: "sports", difficulty: "easy" });
-  
-  const fetchQuestions = async function(url) {
+
+  const fetchQuestions = async function (url) {
     setLoading(true);
     setWaiting(false);
 
@@ -30,7 +30,7 @@ const AppProvider = ({ children }) => {
       const res = await fetch(url);
       const data = await res.json();
 
-      if(data && data.results.length > 0) {
+      if (data && data.results.length > 0) {
         setQuestions(data.results);
         setError(false);
         setLoading(false);
@@ -47,10 +47,10 @@ const AppProvider = ({ children }) => {
     }
   };
 
-  const nextQuestion = function() {
+  const nextQuestion = function () {
     setIndex((currentValue) => {
       let index = currentValue + 1;
-      if(index > questions.length - 1) {
+      if (index > questions.length - 1) {
         index = 0;
         openModal();
       }
@@ -58,29 +58,29 @@ const AppProvider = ({ children }) => {
     })
   }
 
-  const checkAnswer = function(value) {
-    if(value) {
+  const checkAnswer = function (value) {
+    if (value) {
       setCorrect((currentValue) => currentValue + 1)
     }
     nextQuestion();
   }
 
-  const openModal = function(){
+  const openModal = function () {
     setModal(true);
   };
-  
-  const closeModal = function(){
+
+  const closeModal = function () {
     setWaiting(true);
     setCorrect(0);
     setModal(false);
   };
 
-  const handleChange = function(e) {
+  const handleChange = function (e) {
     const { name, value } = e.target;
     setQuiz({ ...quiz, [name]: value });
   };
 
-  const handleSubmit = function(e) {
+  const handleSubmit = function (e) {
     e.preventDefault();
     const { amount, category, difficulty } = quiz;
     const url = `${API_ENDPOINT}amount=${amount}&category=${table[category]}&difficulty=${difficulty}&type=multiple`;
@@ -89,9 +89,10 @@ const AppProvider = ({ children }) => {
 
   const values = {
     waiting, loading, questions, index, correct, error, modal, quiz,
-    nextQuestion, checkAnswer, closeModal, handleChange, handleSubmit };
+    nextQuestion, checkAnswer, closeModal, handleChange, handleSubmit
+  };
   return (
-    <AppContext.Provider value={{...values}}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...values }}>{children}</AppContext.Provider>
   )
 };
 

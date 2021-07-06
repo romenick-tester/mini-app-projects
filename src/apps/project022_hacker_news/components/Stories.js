@@ -2,9 +2,9 @@ import React from "react";
 import { useGlobalContext } from "../assets/context";
 
 const Stories = () => {
-  const { loading, error, hits: stories, removeArticle } = useGlobalContext();
+  const { loading, hits: stories, removeArticle } = useGlobalContext();
 
-  if(loading) {
+  if (loading) {
     return <div className="loading"></div>
   }
 
@@ -19,11 +19,11 @@ const Stories = () => {
         return (
           <article className="story" key={objectID}>
             <h4 className="title">{title}</h4>
-            <p className="info">{points} points by <span>{author} | </span> {num_comments} comments</p> 
+            <p className="info">{points} points by <span>{author} | </span> {num_comments} comments</p>
             <div>
-              <a 
-                href={url} 
-                className="read-link" 
+              <a
+                href={url}
+                className="read-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
