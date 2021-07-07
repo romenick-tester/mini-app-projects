@@ -32,13 +32,20 @@ const BirthdayReminder = () => {
       )
    }
 
+   const removeItem = (id) => {
+      setPeople(state => {
+         const tempPeople = [...state].filter(people => people.id !== id);
+         return tempPeople;
+      })
+   }
+
    return (
       <div className="container">
          <h1>{people.length} Birthdays Today</h1>
          {people.length > 0 && (
-            people.map((person, index) => (
-               <article key={index + 1} className="person">
-                  <button className="del_btn">x</button>
+            people.map(person => (
+               <article key={person.id} className="person">
+                  <button className="del_btn" onClick={() => removeItem(person.id)}>x</button>
                   <div className="person_img">
                      <img src={`${person.image}`} alt={person.name} />
                   </div>
@@ -49,7 +56,7 @@ const BirthdayReminder = () => {
                </article>
             ))
          )}
-         <button className="btn">Clear All</button>
+         <button className="btn" onClick={() => setPeople([])}>Clear All</button>
       </div>
    )
 }
