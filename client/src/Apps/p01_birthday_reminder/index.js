@@ -40,7 +40,7 @@ const BirthdayReminder = () => {
                <article key={index + 1} className="person">
                   <button className="del_btn">x</button>
                   <div className="person_img">
-                     <img src={`./assets/p01_birthday_reminder/${person.image}`} alt={person.name} />
+                     <img src={`${person.image}`} alt={person.name} />
                   </div>
                   <div className="person_info">
                      <h4>{person.name}</h4>
