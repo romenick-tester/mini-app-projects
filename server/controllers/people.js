@@ -10,7 +10,7 @@ const getPeople = (req, res) => {
    if (tempPeople.length > 0) {
       res.status(200).json(tempPeople)
    } else {
-      res.status(200).json("There are no birthdays today.")
+      res.status(200).json([])
    }
 
 }
